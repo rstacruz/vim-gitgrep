@@ -100,7 +100,7 @@ function! gitgrep#run(win_mode, keywords, options) " {{{
       silent! %s#^\d\+:#  & #g
 
       " Format filenames
-      silent! %s#^[^ ]\+$#\r&#g
+      silent! %s#^[^ ].\+$#\r&#g
     catch /./
     endtry
 
