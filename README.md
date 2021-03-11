@@ -28,6 +28,21 @@ Read the [documentation](./doc/gitgrep.txt):
 :help gitgrep
 ```
 
+## Tips
+
+This will bind <kbd>leader</kbd><kbd>g</kbd> to search the current word under the cursor, similar to pressing <kbd>\*</kbd>.
+
+```vim
+nnoremap <leader>*  :GG! <C-r><C-w><CR>
+vnoremap <leader>*  y:GG! <C-r>"<C-b><CR>
+```
+
+This will bend <kbd>leader</kbd><kbd>/</kbd> to put `:GG! ` in the command line, ready to accept input.
+
+```vim
+nnoremap <leader>/  :GG!<space>
+```
+
 ## Thanks
 
 :heart: MIT
