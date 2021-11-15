@@ -203,6 +203,7 @@ endfunction " }}}
 " Binds keys
 function! gitgrep#bind_buffer_keys() " {{{
   nnoremap <silent> <buffer> <cr> :call gitgrep#navigate('open')<cr>
+  nnoremap <silent> <buffer> o    :call gitgrep#navigate('open')<cr>
   nnoremap <silent> <buffer> f    :call gitgrep#toggle_follow_cursor()<cr>
   nnoremap <silent> <buffer> R    :call gitgrep#refresh()<cr>
   autocmd CursorMoved <buffer> call gitgrep#on_cursor_move()
